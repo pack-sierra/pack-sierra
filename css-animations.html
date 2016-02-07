@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="pack-sierra.css">
+    <script>
+    (function() {
+  var cards = document.querySelectorAll(".card.effect__click");
+  for ( var i  = 0, len = cards.length; i < len; i++ ) {
+    var card = cards[i];
+    clickListener( card );
+  }
+
+  function clickListener(card) {
+    card.addEventListener( "click", function() {
+      var c = this.classList;
+      c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
+    });
+  }
+})();
+    </script>
+</head>
+    
+<body>
+    
+    <h1>Sierra's Learning Portfolio</h1>
+       <h2>CSS Animations</h2>
+            <p>
+                <h3>Card Flipping Animation</h3>
+                <div class="card effect__EFFECT">
+                    <div class="card__front">
+                        <span class="card__text">front</span>
+                    </div>
+                    <div class="card__back">
+                        <span class="card__text">back</span>
+                    </div>
+                </div><!-- /card -->
+            </p>
+</body>
+
+</html>
